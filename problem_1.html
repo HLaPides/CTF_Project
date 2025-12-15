@@ -8,14 +8,36 @@
 </head>
 <body>
     <h1> Problem 1: OSINT</h1>
-    <p1> This place serves the best food on campus, can you find their number for me so that I can place an order?</p1>
+    <p> This place serves the best food on campus, can you find their number for me so that I can place an order?</p1>
     <a href="images/problem1_image.jpg" download="problem1_image.jpg">Image</a>
     <br></br>
-    <p2> Format is CTF{xxx-xxx-xxxx}</p2>
+    <p> Format is CTF{xxx-xxx-xxxx}</p>
     <form id="ctf_answerbox">
-        <label for = "answer" id="answer" name="answer">Answer:</label>
-        <input type="text"></input>
+        <label for = "answer">Answer:</label>
+        <input type="text" id="answer" name="answer"></input>
         <button type="submit">Submit</button>
     </form>
+    <div id="result"></div>
+    <script>
+        const flag = "CTF{617-266-9464}"
+        const form = document.getElementById("ctf_answerbox")
+        form.addEventListener("submit",function(e)
+        {
+            e.preventDefault();
+            const userInput = document.getElementById("answer").value
+            const result = document.getElementById("result")
+
+            if (userInput==flag) 
+            {
+                result.style.color = "green"
+                result.textContent = "Correct! Nice work"
+            }
+            else
+            {
+                result.style.color = "red"
+                result.textContent = "Incorrect. try again"
+            }
+        });
+    </script>
 </body>
 </html>
