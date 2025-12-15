@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(136, 145, 148);
+  text-align: center;
+}
+
+h1 {
+  color: rgb(76, 174, 79);
+  text-align: center;
+}
+
+.center-justified {
+  text-align: justify;
+  text-align-last: center;
+}
+
+.button-link {
+    background-color: rgb(76, 174, 79);
+  color: white;       
+  padding: 15px 25px;      
+  text-decoration: none;    
+  border-radius: 4px;      
+  display: inline-block;    
+  cursor: pointer;          
+  font-family: calibri;
+}
+
+.button-link:hover {
+  background-color: #000000;
+}
