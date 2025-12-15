@@ -6,6 +6,39 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <body>
+    <h1> Problem 2:Forensics</h1>
+    <p> Something is up with my dog, can you figure out what I should do?</p1>
+    <a href="images/problem2.jpg" download="problem2.jpg">Image</a>
+    <br></br>
+    <p> Hint: Steghide might prove useful here</p>
+    <form id="ctf_answerbox">
+        <label for = "answer">Answer:</label>
+        <input type="text" id="answer" name="answer"></input>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        const flag = "CTF{CALL_THE_V3T}"
+        const form = document.getElementById("ctf_answerbox")
+        form.addEventListener("submit",function(e)
+        {
+            e.preventDefault();
+            const userInput = document.getElementById("answer").value
+            const result = document.getElementById("result")
+
+            if (userInput==flag) 
+            {
+                result.style.color = "green"
+                result.textContent = "Correct! Nice work"
+            }
+            else
+            {
+                result.style.color = "red"
+                result.textContent = "Incorrect. try again"
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
