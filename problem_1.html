@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,32 +12,12 @@
     <a href="images/problem1_image.jpg" download="problem1_image.jpg">Image</a>
     <br></br>
     <p> Format is CTF{xxx-xxx-xxxx}</p>
-    <form id="ctf_answerbox">
+    <form id="ctf_answerbox" data-flag="aa12703431a98a37d3ec3553b96504a880079a4170f168ca7864b52dd4be5acc">
         <label for = "answer">Answer:</label>
         <input type="text" id="answer" name="answer"></input>
         <button type="submit">Submit</button>
+        <div id="result"></div>
     </form>
-    <div id="result"></div>
-    <script>
-        const flag = "CTF{617-266-9464}"
-        const form = document.getElementById("ctf_answerbox")
-        form.addEventListener("submit",function(e)
-        {
-            e.preventDefault();
-            const userInput = document.getElementById("answer").value
-            const result = document.getElementById("result")
-
-            if (userInput==flag) 
-            {
-                result.style.color = "green"
-                result.textContent = "Correct! Nice work"
-            }
-            else
-            {
-                result.style.color = "red"
-                result.textContent = "Incorrect. try again"
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -13,33 +13,13 @@
     <a href="images/problem2.jpg" download="problem2.jpg">Image</a>
     <br></br>
     <p> Hint: Steghide might prove useful here</p>
-    <form id="ctf_answerbox">
+    <form id="ctf_answerbox" data-flag="1c070368acf13316ae8eab964af38b9fd4d36dcd390c9034e73ceded0c0ec4d3">
         <label for = "answer">Answer:</label>
         <input type="text" id="answer" name="answer"></input>
         <button type="submit">Submit</button>
+        <div id="result"></div>
     </form>
-    <div id="result"></div>
-    <script>
-        const flag = "CTF{CALL_THE_V3T}"
-        const form = document.getElementById("ctf_answerbox")
-        form.addEventListener("submit",function(e)
-        {
-            e.preventDefault();
-            const userInput = document.getElementById("answer").value
-            const result = document.getElementById("result")
-
-            if (userInput==flag) 
-            {
-                result.style.color = "green"
-                result.textContent = "Correct! Nice work"
-            }
-            else
-            {
-                result.style.color = "red"
-                result.textContent = "Incorrect. try again"
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </body>
 </html>
