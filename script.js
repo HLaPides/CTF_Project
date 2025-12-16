@@ -34,5 +34,3 @@ function generateHash(string)
         return hashHex;
     });
 }
-
-generateHash("CTF{617-266-9464}")
