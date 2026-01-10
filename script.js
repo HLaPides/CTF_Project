@@ -8,7 +8,6 @@ async function validateAnswer(event)
     const userInput = await generateHash(document.getElementById("answer").value)
     const result = document.getElementById("result")
     const flag = form.dataset.flag
-
     if (userInput==flag) 
     {
         result.style.color = "green"
